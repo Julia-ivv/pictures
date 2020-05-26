@@ -1,0 +1,10 @@
+@import url(./_visible/error-message_visible.css);
+
+.error-message {
+    color: #ff0000;
+    font-size: 12px;
+    line-height: 15px;
+    opacity: 0;
+    /* display: none; */
+    padding-top: 4px;
+}
