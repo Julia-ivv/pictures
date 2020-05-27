@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <!-- <link rel="stylesheet" href="./pages/index.css"> -->
 <!-- точка выхода для css -->
   <!-- <link rel="stylesheet" href="../src/style.css">  -->
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
@@ -87,16 +87,18 @@
     </div>
 
   </div>
-  <script src="./js/api.js"></script>
+  <!-- <script src="./js/api.js"></script>
   <script src="./js/formValidator.js"></script>
   <script src="./js/userInfo.js"></script>
   <script src="./js/popup.js"></script>
   <script src="./js/cardList.js"></script>
   <script src="./js/card.js"></script>
-  <script src="./js/initialCards.js"></script>
-  <script src="../main.js"></script>      
+  <script src="./js/initialCards.js"></script> -->
+  <!-- <script src="../main.js"></script>       -->
+  
+  <!-- <script src="./index.js"></script> -->
 <!-- точка выхода -->
   <!-- <script src="./main.js"></script> --> 
-  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+  <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
