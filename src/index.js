@@ -6,7 +6,6 @@ import {UserInfo} from "./js/userInfo.js";
 import {Popup} from "./js/popup.js";
 import {CardList} from "./js/cardList.js";
 import {Card} from "./js/card.js";
-//import "./js/initialCards.js";
 
 (function () {
     

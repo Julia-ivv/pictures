@@ -10,7 +10,6 @@ module.exports = {
     entry: { main: './src/index.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        // filename: 'main.js'
         filename: '[name].[chunkhash].js'
     },
     module: {
@@ -20,8 +19,7 @@ module.exports = {
                 exclude: /node_modules/ 
             },
             {
-                test: /\.css$/i, 
-                // use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] 
+                test: /\.css$/i,  
                 use: [
                     (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                     'css-loader', 
@@ -45,7 +43,7 @@ module.exports = {
         ]
     },
     plugins: [ 
-        new MiniCssExtractPlugin({filename: 'style.[contenthash].css'}), //'style.css'}),
+        new MiniCssExtractPlugin({filename: 'style.[contenthash].css'}), 
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
@@ -56,7 +54,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             inject: false, 
-            hash: true, // для страницы нужно считать хеш  Удалить???
+            hash: true, 
             template: './src/index.html', 
             filename: 'index.html' 
         }),
