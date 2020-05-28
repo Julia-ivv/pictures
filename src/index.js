@@ -17,9 +17,11 @@ import {Card} from "./js/card.js";
       validLink: 'Здесь должна быть ссылка',
       validInput: 'Это обязательное поле'
     };
+
+    const isDev = process.env.NODE_ENV === 'development';
   
     const api = new Api({
-      baseUrl: 'https://praktikum.tk/cohort10/',
+      baseUrl: isDev ? 'http://praktikum.tk/cohort10/' : 'https://praktikum.tk/cohort10/',
       headers: {
         authorization: '34026b16-5c88-47b4-844e-005df83aee71',
         'Content-Type': 'application/json'
