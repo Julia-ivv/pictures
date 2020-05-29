@@ -1,8 +1,8 @@
 {
   "name": "pictures",
   "homepage": "https://Julia-ivv.github.io/pictures",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.15",
+  "description": "Interactive page where you can add photos, delete them and like",
   "main": "main.js",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
