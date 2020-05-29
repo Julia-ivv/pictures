@@ -1,11 +1,11 @@
-import "./style.css";
+import './style.css';
 
-import {Api} from "./js/api.js";
-import {FormValidator} from "./js/formValidator.js";
-import {UserInfo} from "./js/userInfo.js";
-import {Popup} from "./js/popup.js";
-import {CardList} from "./js/cardList.js";
-import {Card} from "./js/card.js";
+import {Api} from './js/api.js';
+import {FormValidator} from './js/formValidator.js';
+import {UserInfo} from './js/userInfo.js';
+import {Popup} from './js/popup.js';
+import {CardList} from './js/cardList.js';
+import {Card} from './js/card.js';
 
 (function () {
     
@@ -17,10 +17,8 @@ import {Card} from "./js/card.js";
       validInput: 'Это обязательное поле'
     };
 
-    const isDev = process.env.NODE_ENV === 'development';
-  
     const api = new Api({
-      baseUrl: isDev ? 'http://praktikum.tk/cohort10/' : 'https://praktikum.tk/cohort10/',
+      baseUrl: NODE_ENV === 'development' ? 'http://praktikum.tk/cohort10/' : 'https://praktikum.tk/cohort10/',
       headers: {
         authorization: '34026b16-5c88-47b4-844e-005df83aee71',
         'Content-Type': 'application/json'

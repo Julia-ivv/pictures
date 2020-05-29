@@ -1,5 +1,5 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -15,21 +15,26 @@ module.exports = {
     module: {
         rules: [{ 
                 test: /\.js$/, 
-                use: { loader: "babel-loader" }, 
+                use: { loader: 'babel-loader' }, 
                 exclude: /node_modules/ 
             },
             {
                 test: /\.css$/i,  
                 use: [
                     (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                    'css-loader', 
+                    {
+                        loader:'css-loader',
+                        options: {
+                            importLoaders: 2
+                        } 
+                    }, 
                     'postcss-loader'
                 ]
             },
             {
                 test: /\.(gif|ico|png|jpe?g|svg)$/i,
                 use: [
-                  'file-loader?name=./src/images/[name].[ext]',
+                    'file-loader?name=./src/images/[name].[ext]',
                   {
                     loader: 'image-webpack-loader',
                     options: {},
@@ -56,7 +61,7 @@ module.exports = {
             inject: false, 
             hash: true, 
             template: './src/index.html', 
-            filename: 'index.html' 
+            filename: 'index.html'
         }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({'NODE_ENV': JSON.stringify(process.env.NODE_ENV)})
