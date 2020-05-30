@@ -1,4 +1,4 @@
-class FormValidator {
+export class FormValidator {
   constructor(popup, textError) {
     this.popup = popup;
     this.texts = textError;
