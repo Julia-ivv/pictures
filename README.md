@@ -8,7 +8,7 @@ https://Julia-ivv.github.io/pictures
 
 Инструкция по развертыванию проекта
 ---
-Склонировать репозиторий с проектом на свой компьютер
+Клонировать репозиторий с проектом на свой компьютер
 ```bash
 git clone https://github.com/Julia-ivv/pictures.git
 ```
